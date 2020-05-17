@@ -1,5 +1,6 @@
 import React from 'react';
-import './App.css';
+import './css/App.css';
+import logo from './logo.svg'
 import TodoList from './TodoList'
 
 class App extends React.Component {
@@ -7,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      todos : [
+      todos: [
         {
           id: 1,
           title: "Hello, React!",
@@ -26,11 +27,22 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>todoアプリを作ってみた</h1>
-        <TodoList 
-          todos={this.state.todos}
-        />
+      <div className="App">
+        <div className="Header">
+          <div>
+            <img src={logo} alt="logo" className="App-logo"></img>
+            <div className="Title">
+              <p>
+                Todoアプリを作ってみた
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="Main">
+          <TodoList
+            todos={this.state.todos}
+          />
+        </div>
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import React from 'react';
+import './css/Todo.css'
 
 class Todo extends React.Component {
 
@@ -8,7 +9,7 @@ class Todo extends React.Component {
 
         return(
             <li className={className}>
-                <span>{this.props.id}</span>
+                <span>{this.props.id} : </span>
                 <span>{this.props.title}</span>
                 <a href="" alt="">{link}</a>
                 <p>{this.props.desc}</p>
