@@ -2,6 +2,7 @@ import React from 'react';
 import './css/App.css';
 import logo from './logo.svg'
 import TodoList from './TodoList'
+import Form from './Form';
 
 class App extends React.Component {
 
@@ -29,16 +30,13 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="Header">
-          <div>
-            <img src={logo} alt="logo" className="App-logo"></img>
-            <div className="Title">
-              <p>
-                Todoアプリを作ってみた
-              </p>
-            </div>
-          </div>
+          <img src={logo} alt="logo" className="App-logo"></img>
+          <p className="Title">
+              Todoアプリを作ってみた
+          </p>
         </div>
         <div className="Main">
+          <Form />
           <TodoList
             todos={this.state.todos}
           />

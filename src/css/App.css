@@ -1,26 +1,27 @@
 .App {
-  padding-right: 20%;
-  padding-left: 20%;
-  background-color: rgb(138, 179, 26);
+  background-color: rgb(92, 122, 9);
 }
 
 .Header {
+  background-color: rgb(200, 224, 134);
   height: 80px;
   margin: 10px 0px;
   text-align: center;
-
+  position: relative;
 }
 
 .Title {
+  font-size: 24px;
+  font-weight: bold;
   vertical-align: middle;
-  background-color: blue;
+  display: inline-block;
 }
 
 .Main {
+  background-color: rgb(128, 219, 231);
   text-align: center;
   border: solid 2px;
   border-color: gray;
-  background-color: white;
 }
 
 .App-logo {

@@ -11,9 +11,11 @@ class TodoList extends React.Component {
             />
         )
         return(
-            <ul>
-                {todos}
-            </ul>
+            <div className="ListArea">
+                <ul>
+                    {todos}
+                </ul>
+            </div>
         );
     }
 }
