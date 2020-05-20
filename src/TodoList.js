@@ -8,6 +8,7 @@ class TodoList extends React.Component {
             <Todo
                 key={todo.id}
                 {...todo}
+                setTodoStatus={this.props.setTodoStatus}
             />
         )
         return(

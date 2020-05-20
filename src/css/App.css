@@ -24,10 +24,17 @@
   border-color: gray;
 }
 
+.ContentsArea {
+  width: 700px;
+  display: inline-block;
+}
+
 .App-logo {
   height: 10vmin;
   pointer-events: none;
   float: left;
+  position: relative;
+  left: 300px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

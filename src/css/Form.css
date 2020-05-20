@@ -1,0 +1,14 @@
+.form {
+    background-color: rgb(205, 165, 224);
+}
+
+.TodoForm input {
+    width: 250px;
+    height: 20px;
+    margin-bottom: 3px;
+}
+
+.TodoForm textarea {
+    width: 250px;
+    height: 60px;
+}
