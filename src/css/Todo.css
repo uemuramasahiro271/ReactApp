@@ -4,9 +4,14 @@ li {
     margin-left : auto;
     margin-bottom: 10px;;
     border: solid 2px;
-    border-color: gray;
+    border-color: orange;
 }
 
 li a {
     margin-left: 20px;
+}
+
+li div {
+    font-size: 18px;
+    font-weight: bold;
 }

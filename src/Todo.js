@@ -9,9 +9,11 @@ class Todo extends React.Component {
 
         return(
             <li className={className}>
-                <span>{this.props.id} : </span>
-                <span>{this.props.title}</span>
-                <a href="" alt="" onClick={(e) => {e.preventDefault(); this.props.setTodoStatus(this.props)}}>{link}</a>
+                <div>
+                    <span>{this.props.id} : </span>
+                    <span>{this.props.title}</span>
+                    <a href="" alt="" onClick={(e) => {e.preventDefault(); this.props.setTodoStatus(this.props)}}>{link}</a>
+                </div>
                 <p>{this.props.desc}</p>
             </li>
         );

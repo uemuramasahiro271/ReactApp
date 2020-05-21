@@ -1,11 +1,9 @@
 .App {
-  background-color: rgb(92, 122, 9);
 }
 
 .Header {
-  background-color: rgb(200, 224, 134);
+  background-color: rgb(229, 241, 193);
   height: 80px;
-  margin: 10px 0px;
   text-align: center;
   position: relative;
 }
@@ -18,7 +16,7 @@
 }
 
 .Main {
-  background-color: rgb(128, 219, 231);
+  background-color: rgb(226, 225, 225);
   text-align: center;
   border: solid 2px;
   border-color: gray;
@@ -27,6 +25,7 @@
 .ContentsArea {
   width: 700px;
   display: inline-block;
+  background-color: white;
 }
 
 .App-logo {
