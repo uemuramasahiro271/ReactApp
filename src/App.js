@@ -9,24 +9,40 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     
-      const todos = [
-        {
-          id: 1,
-          title: "Hello, React!",
-          desc: "React始めました",
-          done: false
-        },
-        {
-          id: 2,
-          title: "Hello, Redux",
-          desc: "Reduxも始めました",
-          done: false
-        },
-      ]
+      const todos = []
       this.state = {
+        isLoading: false,
+        hasError: false,
         todos: todos,
         countTodo: todos.length + 1,
       }
+  }
+
+  fetchData(url) {
+    this.setState({isLoading: true})
+    fetch(url)
+      .then((response) => {
+        console.log(response)
+        if(!response.ok){
+          throw Error(response.statusText)
+        }
+        this.setState({isLoading: false})
+        return response
+      })
+      .then((response) => response.json())
+      .then((data) => {
+        let countTodo = this.state.countTodo
+        const todos = data.map(data => {
+          const todo = Object.assign({}, data, {id: countTodo++, done: false})
+          return todo
+        })
+        this.setState({todos, countTodo})
+      })
+      .catch(() => this.setState({hasError: true}))
+  }
+
+  componentDidMount() {
+    this.fetchData('data.json')
   }
 
   handleSubmit(e) {
@@ -75,6 +91,8 @@ class App extends React.Component {
             <TodoList
               todos={this.state.todos}
               setTodoStatus={this.setTodoStatus.bind(this)}
+              isLoading={this.state.isLoading}
+              hasError={this.state.hasError}
             />
           </div>
 
